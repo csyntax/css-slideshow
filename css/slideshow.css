@@ -110,3 +110,175 @@ a:hover {
   background-color: #fff;
   color: #1f1f1f;
 }
+/* - Slide In/Out -*/
+ul:nth-of-type(2) {
+  z-index: 3;
+}
+ul:nth-of-type(2) img {
+  -webkit-animation-duration: 14s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease;
+  -moz-animation-duration: 14s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: ease;
+  animation-duration: 14s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  position: relative;
+}
+ul:nth-of-type(2) li:nth-of-type(1) img {
+  -webkit-animation-name: slideOne;
+  -moz-animation-name: slideOne;
+  animation-name: slideOne;
+  left: 0;
+}
+ul:nth-of-type(2) li:nth-of-type(2) img {
+  -webkit-animation-name: slideTwo;
+  -moz-animation-name: slideTwo;
+  animation-name: slideTwo;
+  left: 100%;
+}
+ul:nth-of-type(2) li:nth-of-type(3) img {
+  -webkit-animation-name: slideThree;
+  -moz-animation-name: slideThree;
+  animation-name: slideThree;
+  left: 100%;
+}
+@-webkit-keyframes slideOne {
+  0%,
+  30% {
+    left: 0;
+  }
+  33%,
+  94% {
+    left: -100%;
+  }
+  94.0001%,
+  97% {
+    left: 100%;
+  }
+  97%,
+  100% {
+    left: 0;
+  }
+}
+@-webkit-keyframes slideTwo {
+  0%,
+  30% {
+    left: 100%;
+  }
+  33%,
+  63% {
+    left: 0;
+  }
+  66%,
+  100% {
+    left: -100%;
+  }
+}
+@-webkit-keyframes slideThree {
+  0%,
+  63% {
+    left: 100%;
+  }
+  66%,
+  94% {
+    left: 0;
+  }
+  97%,
+  100% {
+    left: -100%;
+  }
+}
+@-moz-keyframes slideOne {
+  0%,
+  30% {
+    left: 0;
+  }
+  33%,
+  94% {
+    left: -100%;
+  }
+  94.0001%,
+  97% {
+    left: 100%;
+  }
+  97%,
+  100% {
+    left: 0;
+  }
+}
+@-moz-keyframes slideTwo {
+  0%,
+  30% {
+    left: 100%;
+  }
+  33%,
+  63% {
+    left: 0;
+  }
+  66%,
+  100% {
+    left: -100%;
+  }
+}
+@-moz-keyframes slideThree {
+  0%,
+  63% {
+    left: 100%;
+  }
+  66%,
+  94% {
+    left: 0;
+  }
+  97%,
+  100% {
+    left: -100%;
+  }
+}
+@keyframes slideOne {
+  0%,
+  30% {
+    left: 0;
+  }
+  33%,
+  94% {
+    left: -100%;
+  }
+  94.0001%,
+  97% {
+    left: 100%;
+  }
+  97%,
+  100% {
+    left: 0;
+  }
+}
+@keyframes slideTwo {
+  0%,
+  30% {
+    left: 100%;
+  }
+  33%,
+  63% {
+    left: 0;
+  }
+  66%,
+  100% {
+    left: -100%;
+  }
+}
+@keyframes slideThree {
+  0%,
+  63% {
+    left: 100%;
+  }
+  66%,
+  94% {
+    left: 0;
+  }
+  97%,
+  100% {
+    left: -100%;
+  }
+}
