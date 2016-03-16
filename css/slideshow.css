@@ -115,15 +115,15 @@ ul:nth-of-type(2) {
   z-index: 3;
 }
 ul:nth-of-type(2) img {
-  -webkit-animation-duration: 14s;
-  -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease;
-  -moz-animation-duration: 14s;
-  -moz-animation-iteration-count: infinite;
   -moz-animation-timing-function: ease;
-  animation-duration: 14s;
-  animation-iteration-count: infinite;
   animation-timing-function: ease;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-duration: 14s;
+  -moz-animation-duration: 14s;
+  animation-duration: 14s;
   position: relative;
 }
 ul:nth-of-type(2) li:nth-of-type(1) img {
