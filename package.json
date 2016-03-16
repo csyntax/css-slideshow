@@ -1,0 +1,12 @@
+{
+  "name": "css-slideshow",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Ivan Ivanov",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-less": "^1.2.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
