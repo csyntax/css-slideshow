@@ -1,5 +1,7 @@
+@import (once) "mixins";
+
 ul {
-	background: #fff;
+	background-color: #fff;
 	box-shadow: rgba(0, 0, 0, 0.75) 0 1px 12px;
 	display: inline-block;
 	left: 7.5%;
@@ -9,31 +11,37 @@ ul {
 	width: 85%;
     
     &:before {
-	   background: rgba(233, 0, 0, 0.7);
-	   border-bottom-left-radius: 4px;
-	   color: #fff;
-	   content: "paused";
-	   display: block;
-	   font-size: 0.7em;
-	   font-weight: 700;
-	   right: 0;
-	   opacity: 0;
-	   padding: 0.2em 0.4em;
-	   position: absolute;
-	   text-align: center;
-	   text-transform: uppercase;
-	   top: 0;
-	   z-index: 2;
+        background-color: rgba(233, 0, 0, 0.7);
+        border-bottom-left-radius: 4px;
+        color: #fff;
+        content: "paused";
+        display: block;
+        font-size: 0.7em;
+        font-weight: 700;
+        right: 0;
+        opacity: 0;
+        padding: 0.2em 0.4em;
+        position: absolute;
+        text-align: center;
+        text-transform: uppercase;
+        top: 0;
+        z-index: 2;
     }
     
     &:hover:before {
-	   opacity: 1;
-    }
+		opacity: 1;
+	}
+    
+    img {
+		display: block;
+		margin: 0 auto;
+		width: 100%;
+	}
     
     &:hover li,
-    &:hover img {
+	&:hover img {
 		.animation-play-state(paused);
-    }
+	}
     
     li {
         left: 1.5%;
@@ -43,17 +51,194 @@ ul {
         top: 1.9%;
         width: 97%;
     }
-    
-    img {
-        display: block;
-        margin: 0 auto;
-        width: 100%;
-    }
+}
+	
+
+ul:last-of-type {
+	background-color: transparent;
+	box-shadow: none;
+	display: inline-block;
+	margin: 0;
+	position: relative;
 }
 
-@import "mixins";
-@import "page";
-@import "animations";
-@import "keyframes/fade";
-@import "keyframes/fall";
-@import "keyframes/slide";
+	ul:last-of-type li {
+        .animation-duration(16s);
+        .animation-iteration-count(infinite);
+        .animation-timing-function(ease);
+
+		background-color: #fff;
+		box-shadow: rgba(0, 0, 0, 0.5) 0 0 2px;
+		display: inline-block;
+		left: 0;
+		margin: 0;
+		padding: 1.5%;
+		top: 0;
+	}
+	
+	ul:last-of-type li:nth-of-type(1) {
+		-webkit-animation-name: fallThree;
+		-moz-animation-name: fallThree;
+        animation-name: fallThree;
+		top: 2%;
+        
+        .transform(rotate(-1deg));
+	}
+	
+	ul:last-of-type li:nth-of-type(2) {
+		-webkit-animation-name: fallTwo;
+		-moz-animation-name: fallTwo;
+        animation-name: fallTwo;
+		top: 2%;
+
+        .transform(rotate(-1.5deg));
+	}
+	
+	ul:last-of-type li:nth-of-type(3) {
+		-webkit-animation-name: fallOne;
+		-moz-animation-name: fallOne;
+        animation-name: fallOne;
+		top: 1%;
+	}
+
+/* - Falling animations -*/
+
+
+	
+/* - Fade In/Out -*/
+
+ul:first-of-type li {
+	-webkit-animation-duration: 12s;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-duration: 12s;
+	-moz-animation-iteration-count: infinite;
+	opacity: 0;
+}
+
+ul:first-of-type li:first-child {
+	-webkit-animation-name: fadeOne;
+	-moz-animation-name: fadeOne;
+	opacity: 1;
+}
+
+ul:first-of-type li:nth-of-type(2) {
+	-webkit-animation-name: fadeTwo;
+	-moz-animation-name: fadeTwo;
+}
+
+ul:first-of-type li:nth-of-type(3) {
+	-webkit-animation-name: fadeThree;
+	-moz-animation-name: fadeThree;
+}
+
+/* - Slide In/Out -*/
+
+ul:nth-of-type(2) {
+	z-index: 3;
+}
+
+ul:nth-of-type(2) img {
+	-webkit-animation-duration: 14s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease;
+	-moz-animation-duration: 14s;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: ease;
+	position: relative;
+}
+
+ul:nth-of-type(2) li:nth-of-type(1) img {
+	-webkit-animation-name: slideOne;
+	-moz-animation-name: slideOne;
+	left: 0;
+}
+
+ul:nth-of-type(2) li:nth-of-type(2) img {
+	-webkit-animation-name: slideTwo;
+	-moz-animation-name: slideTwo;
+	left: 100%;
+}
+
+ul:nth-of-type(2) li:nth-of-type(3) img {
+	-webkit-animation-name: slideThree;
+	-moz-animation-name: slideThree;
+	left: 100%;
+}
+
+body {
+	background-color: #1f1f1f;
+	color: #e2e2e2;
+	font-family: 'ff-dagny-web-pro-1', 'ff-dagny-web-pro-2', 'helvetica neue', helvetica, sans-serif;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body > div {
+	margin: 0 auto;
+	max-width: 960px;
+	overflow: hidden;
+	width: 95%;
+}
+
+header {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	display: block;
+	margin: 0 auto;
+	width: 85%;
+}
+
+	header p {
+		color: #cecece;
+		font-size: 0.9em;
+		margin: 0;
+		padding: 0.5em 0 1em 0;
+	}
+
+h1 {
+	font-size: 1.6em;
+	font-weight: 700;
+	margin: 0;
+	padding: 0.4em 0 0 0;
+	text-shadow: rgba(255, 255, 255, 0.09) 0 1px 0;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 1em;
+	font-weight: 400;
+	margin: 4em auto 0.5em auto;
+	padding: 0;
+	width: 85%;
+}
+
+	h2:first-of-type {
+		margin-top: 2.4em;
+	}
+
+footer {
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	display: block;
+	margin-top: 2em;
+	margin: 2em auto 0 auto;
+	padding: 1em 0 1.4em 0;
+	text-align: right;
+	width: 85%;
+}
+
+a {
+	color: #e3e3e3;
+	display: inline-block;
+	font-size: 0.8em;
+	text-decoration: none;
+}
+
+	a:hover {
+		background-color: #fff;
+		color: #1f1f1f;
+	}
+    
+    
+  @import "keyframes/fade";
+  @import "keyframes/fall";
+  @import "keyframes/slide";

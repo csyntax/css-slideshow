@@ -1,5 +1,5 @@
 ul {
-  background: #fff;
+  background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.75) 0 1px 12px;
   display: inline-block;
   left: 7.5%;
@@ -9,7 +9,7 @@ ul {
   width: 85%;
 }
 ul:before {
-  background: rgba(233, 0, 0, 0.7);
+  background-color: rgba(233, 0, 0, 0.7);
   border-bottom-left-radius: 4px;
   color: #fff;
   content: "paused";
@@ -28,6 +28,11 @@ ul:before {
 ul:hover:before {
   opacity: 1;
 }
+ul img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
 ul:hover li,
 ul:hover img {
   -webkit-animation-play-state: paused;
@@ -43,14 +48,116 @@ ul li {
   top: 1.9%;
   width: 97%;
 }
-ul img {
-  display: block;
-  margin: 0 auto;
-  width: 100%;
+ul:last-of-type {
+  background-color: transparent;
+  box-shadow: none;
+  display: inline-block;
+  margin: 0;
+  position: relative;
+}
+ul:last-of-type li {
+  -webkit-animation-duration: 16s;
+  -moz-animation-duration: 16s;
+  -o-animation-duration: 16s;
+  animation-duration: 16s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease;
+  -moz-animation-timing-function: ease;
+  -o-animation-timing-function: ease;
+  animation-timing-function: ease;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 2px;
+  display: inline-block;
+  left: 0;
+  margin: 0;
+  padding: 1.5%;
+  top: 0;
+}
+ul:last-of-type li:nth-of-type(1) {
+  -webkit-animation-name: fallThree;
+  -moz-animation-name: fallThree;
+  animation-name: fallThree;
+  top: 2%;
+  -ms-transform: rotate(-1deg);
+  -webkit-transform: rotate(-1deg);
+  -moz-transform: rotate(-1deg);
+  -o-transform: rotate(-1deg);
+  transform: rotate(-1deg);
+}
+ul:last-of-type li:nth-of-type(2) {
+  -webkit-animation-name: fallTwo;
+  -moz-animation-name: fallTwo;
+  animation-name: fallTwo;
+  top: 2%;
+  -ms-transform: rotate(-1.5deg);
+  -webkit-transform: rotate(-1.5deg);
+  -moz-transform: rotate(-1.5deg);
+  -o-transform: rotate(-1.5deg);
+  transform: rotate(-1.5deg);
+}
+ul:last-of-type li:nth-of-type(3) {
+  -webkit-animation-name: fallOne;
+  -moz-animation-name: fallOne;
+  animation-name: fallOne;
+  top: 1%;
+}
+/* - Falling animations -*/
+/* - Fade In/Out -*/
+ul:first-of-type li {
+  -webkit-animation-duration: 12s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-duration: 12s;
+  -moz-animation-iteration-count: infinite;
+  opacity: 0;
+}
+ul:first-of-type li:first-child {
+  -webkit-animation-name: fadeOne;
+  -moz-animation-name: fadeOne;
+  opacity: 1;
+}
+ul:first-of-type li:nth-of-type(2) {
+  -webkit-animation-name: fadeTwo;
+  -moz-animation-name: fadeTwo;
+}
+ul:first-of-type li:nth-of-type(3) {
+  -webkit-animation-name: fadeThree;
+  -moz-animation-name: fadeThree;
+}
+/* - Slide In/Out -*/
+ul:nth-of-type(2) {
+  z-index: 3;
+}
+ul:nth-of-type(2) img {
+  -webkit-animation-duration: 14s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease;
+  -moz-animation-duration: 14s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: ease;
+  position: relative;
+}
+ul:nth-of-type(2) li:nth-of-type(1) img {
+  -webkit-animation-name: slideOne;
+  -moz-animation-name: slideOne;
+  left: 0;
+}
+ul:nth-of-type(2) li:nth-of-type(2) img {
+  -webkit-animation-name: slideTwo;
+  -moz-animation-name: slideTwo;
+  left: 100%;
+}
+ul:nth-of-type(2) li:nth-of-type(3) img {
+  -webkit-animation-name: slideThree;
+  -moz-animation-name: slideThree;
+  left: 100%;
 }
 body {
   background-color: #1f1f1f;
   color: #e2e2e2;
+  font-family: 'ff-dagny-web-pro-1', 'ff-dagny-web-pro-2', 'helvetica neue', helvetica, sans-serif;
   font-size: 100%;
   margin: 0;
   padding: 0;
@@ -110,196 +217,88 @@ a:hover {
   background-color: #fff;
   color: #1f1f1f;
 }
-/* - Slide In/Out -*/
-ul:nth-of-type(2) {
-  z-index: 3;
-}
-ul:nth-of-type(2) img {
-  -webkit-animation-timing-function: ease;
-  -moz-animation-timing-function: ease;
-  animation-timing-function: ease;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-duration: 14s;
-  -moz-animation-duration: 14s;
-  animation-duration: 14s;
-  position: relative;
-}
-ul:nth-of-type(2) li:nth-of-type(1) img {
-  -webkit-animation-name: slideOne;
-  -moz-animation-name: slideOne;
-  animation-name: slideOne;
-  left: 0;
-}
-ul:nth-of-type(2) li:nth-of-type(2) img {
-  -webkit-animation-name: slideTwo;
-  -moz-animation-name: slideTwo;
-  animation-name: slideTwo;
-  left: 100%;
-}
-ul:nth-of-type(2) li:nth-of-type(3) img {
-  -webkit-animation-name: slideThree;
-  -moz-animation-name: slideThree;
-  animation-name: slideThree;
-  left: 100%;
-}
-/*
-ul:last-of-type {
-	background-color: transparent;
-	box-shadow: none;
-	display: inline-block;
-	margin: 0;
-	position: relative;
-}
-
-ul:last-of-type li {
-    .animation-timing-function(ease);
-    .animation-iteration-count(infinite);
-    .animation-duration(16s);
-		
-    background: #fff;
-	box-shadow: rgba(0, 0, 0, 0.5) 0 0 2px;
-	display: inline-block;
-	left: 0;
-	margin: 0;
-	padding: 1.5%;
-	top: 0;
-}
-	
-ul:last-of-type li:nth-of-type(1) {
-    .animation-name(fallThree);	
-    top: 2%;
-	-webkit-transform: rotate(-1deg);
-	-moz-transform: rotate(-1deg);
-	transform: rotate(-1deg);
-}
-	
-ul:last-of-type li:nth-of-type(2) {
-    .animation-name(fallTwo);
-	top: 2%;
-	-webkit-transform: rotate(1.5deg);
-	-moz-transform: rotate(1.5deg);
-	transform: rotate(1.5deg);
-}
-	
-ul:last-of-type li:nth-of-type(3) {
-    .animation-name(fallOne);
-	top: 1%;
-}*/
-l:last-of-type {
-  background-color: transparent;
-  box-shadow: none;
-  display: inline-block;
-  margin: 0;
-  position: relative;
-}
-ul:last-of-type li {
-  -webkit-animation-duration: 16s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease;
-  -moz-animation-duration: 16s;
-  -moz-animation-iteration-count: infinite;
-  -moz-animation-timing-function: ease;
-  background-color: #fff;
-  box-shadow: rgba(0, 0, 0, 0.5) 0 0 2px;
-  display: inline-block;
-  left: 0;
-  margin: 0;
-  padding: 1.5%;
-  top: 0;
-}
-ul:last-of-type li:nth-of-type(1) {
-  -webkit-animation-name: fallThree;
-  -moz-animation-name: fallThree;
-  top: 2%;
-  -webkit-transform: rotate(-1deg);
-  -moz-transform: rotate(-1deg);
-}
-ul:last-of-type li:nth-of-type(2) {
-  -webkit-animation-name: fallTwo;
-  -moz-animation-name: fallTwo;
-  top: 2%;
-  -webkit-transform: rotate(1.5deg);
-  -moz-transform: rotate(1.5deg);
-}
-ul:last-of-type li:nth-of-type(3) {
-  -webkit-animation-name: fallOne;
-  -moz-animation-name: fallOne;
-  top: 1%;
-}
-@keyframes fallOne {
+@-webkit-keyframes fadeOne {
   0%,
   30% {
     opacity: 1;
-    top: 1%;
-    transform: rotate(0deg);
   }
-  35%,
+  33%,
   94% {
     opacity: 0;
-    top: 120%;
-    transform: rotate(-13deg);
   }
-  94.0001%,
-  96% {
-    opacity: 0;
-    top: -100%;
-    transform: rotate(-13deg);
-  }
+  97%,
   100% {
     opacity: 1;
-    top: 1%;
-    transform: rotate(0deg);
   }
 }
-@keyframes fallTwo {
+@-webkit-keyframes fadeTwo {
   0%,
-  65% {
-    opacity: 1;
-    top: 2%;
-    transform: rotate(1.5deg);
+  30% {
+    opacity: 0;
   }
-  70%,
+  33%,
+  63% {
+    opacity: 1;
+  }
+  66%,
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeThree {
+  0%,
+  63% {
+    opacity: 0;
+  }
+  66%,
+  94% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes fadeOne {
+  0%,
+  30% {
+    opacity: 1;
+  }
+  33%,
   94% {
     opacity: 0;
-    top: 120%;
-    transform: rotate(13deg);
   }
-  94.0001%,
-  96% {
-    opacity: 0;
-    top: -100%;
-    transform: rotate(13deg);
-  }
+  97%,
   100% {
     opacity: 1;
-    top: 2%;
-    transform: rotate(1.5deg);
   }
 }
-@keyframes fallThree {
+@-moz-keyframes fadeTwo {
   0%,
-  91% {
+  30% {
+    opacity: 0;
+  }
+  33%,
+  63% {
     opacity: 1;
-    top: 2%;
-    transform: rotate(-1deg);
   }
-  95% {
-    opacity: 0;
-    top: 120%;
-    transform: rotate(-10deg);
-  }
-  95.0001%,
-  96% {
-    opacity: 0;
-    top: -100%;
-    transform: rotate(10deg);
-  }
+  66%,
   100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes fadeThree {
+  0%,
+  63% {
+    opacity: 0;
+  }
+  66%,
+  94% {
     opacity: 1;
-    top: 2%;
-    transform: rotate(-1deg);
+  }
+  97%,
+  100% {
+    opacity: 0;
   }
 }
 @-webkit-keyframes fallOne {
@@ -450,6 +449,80 @@ ul:last-of-type li:nth-of-type(3) {
     -moz-transform: rotate(-1deg);
   }
 }
+@keyframes fallOne {
+  0%,
+  30% {
+    opacity: 1;
+    top: 1%;
+    transform: rotate(0deg);
+  }
+  35%,
+  94% {
+    opacity: 0;
+    top: 120%;
+    transform: rotate(-13deg);
+  }
+  94.0001%,
+  96% {
+    opacity: 0;
+    top: -100%;
+    transform: rotate(-13deg);
+  }
+  100% {
+    opacity: 1;
+    top: 1%;
+    transform: rotate(0deg);
+  }
+}
+@keyframes fallTwo {
+  0%,
+  65% {
+    opacity: 1;
+    top: 2%;
+    transform: rotate(1.5deg);
+  }
+  70%,
+  94% {
+    opacity: 0;
+    top: 120%;
+    -webkit-transform: rotate(13deg);
+  }
+  94.0001%,
+  96% {
+    opacity: 0;
+    top: -100%;
+    transform: rotate(13deg);
+  }
+  100% {
+    opacity: 1;
+    top: 2%;
+    transform: rotate(1.5deg);
+  }
+}
+@keyframes fallThree {
+  0%,
+  91% {
+    opacity: 1;
+    top: 2%;
+    transform: rotate(-1deg);
+  }
+  95% {
+    opacity: 0;
+    top: 120%;
+    transform: rotate(-10deg);
+  }
+  95.0001%,
+  96% {
+    opacity: 0;
+    top: -100%;
+    transform: rotate(10deg);
+  }
+  100% {
+    opacity: 1;
+    top: 2%;
+    transform: rotate(-1deg);
+  }
+}
 @-webkit-keyframes slideOne {
   0%,
   30% {
@@ -529,52 +602,6 @@ ul:last-of-type li:nth-of-type(3) {
   }
 }
 @-moz-keyframes slideThree {
-  0%,
-  63% {
-    left: 100%;
-  }
-  66%,
-  94% {
-    left: 0;
-  }
-  97%,
-  100% {
-    left: -100%;
-  }
-}
-@keyframes slideOne {
-  0%,
-  30% {
-    left: 0;
-  }
-  33%,
-  94% {
-    left: -100%;
-  }
-  94.0001%,
-  97% {
-    left: 100%;
-  }
-  97%,
-  100% {
-    left: 0;
-  }
-}
-@keyframes slideTwo {
-  0%,
-  30% {
-    left: 100%;
-  }
-  33%,
-  63% {
-    left: 0;
-  }
-  66%,
-  100% {
-    left: -100%;
-  }
-}
-@keyframes slideThree {
   0%,
   63% {
     left: 100%;
