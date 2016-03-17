@@ -26,6 +26,7 @@ ul:nth-of-type(2) {
     }
 }
 
+/*
 ul:last-of-type {
 	background-color: transparent;
 	box-shadow: none;
@@ -67,4 +68,51 @@ ul:last-of-type li:nth-of-type(2) {
 ul:last-of-type li:nth-of-type(3) {
     .animation-name(fallOne);
 	top: 1%;
+}*/
+
+
+l:last-of-type {
+	background-color: transparent;
+	box-shadow: none;
+	display: inline-block;
+	margin: 0;
+	position: relative;
 }
+
+	ul:last-of-type li {
+		-webkit-animation-duration: 16s;
+		-webkit-animation-iteration-count: infinite;
+		-webkit-animation-timing-function: ease;
+		-moz-animation-duration: 16s;
+		-moz-animation-iteration-count: infinite;
+		-moz-animation-timing-function: ease;
+		background-color: #fff;
+		box-shadow: rgba(0, 0, 0, 0.5) 0 0 2px;
+		display: inline-block;
+		left: 0;
+		margin: 0;
+		padding: 1.5%;
+		top: 0;
+	}
+	
+	ul:last-of-type li:nth-of-type(1) {
+		-webkit-animation-name: fallThree;
+		-moz-animation-name: fallThree;
+		top: 2%;
+		-webkit-transform: rotate(-1deg);
+		-moz-transform: rotate(-1deg);
+	}
+	
+	ul:last-of-type li:nth-of-type(2) {
+		-webkit-animation-name: fallTwo;
+		-moz-animation-name: fallTwo;
+		top: 2%;
+		-webkit-transform: rotate(1.5deg);
+		-moz-transform: rotate(1.5deg);
+	}
+	
+	ul:last-of-type li:nth-of-type(3) {
+		-webkit-animation-name: fallOne;
+		-moz-animation-name: fallOne;
+		top: 1%;
+	}
