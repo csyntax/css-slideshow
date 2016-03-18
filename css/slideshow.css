@@ -182,7 +182,9 @@ ul:nth-of-type(2) li:nth-of-type(3) img {
   left: 100%;
 }
 body {
-  background: #1f1f1f url("../images/b.jpg") no-repeat;
+  background: white url("../images/b.jpg") no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
   color: #e2e2e2;
   font-size: 100%;
   margin: 0;
@@ -308,6 +310,48 @@ a:hover {
   }
 }
 @-moz-keyframes fadeThree {
+  0%,
+  63% {
+    opacity: 0;
+  }
+  66%,
+  94% {
+    opacity: 1;
+  }
+  97%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOne {
+  0%,
+  30% {
+    opacity: 1;
+  }
+  33%,
+  94% {
+    opacity: 0;
+  }
+  97%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeTwo {
+  0%,
+  30% {
+    opacity: 0;
+  }
+  33%,
+  63% {
+    opacity: 1;
+  }
+  66%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeThree {
   0%,
   63% {
     opacity: 0;
@@ -622,6 +666,52 @@ a:hover {
   }
 }
 @-moz-keyframes slideThree {
+  0%,
+  63% {
+    left: 100%;
+  }
+  66%,
+  94% {
+    left: 0;
+  }
+  97%,
+  100% {
+    left: -100%;
+  }
+}
+@keyframes slideOne {
+  0%,
+  30% {
+    left: 0;
+  }
+  33%,
+  94% {
+    left: -100%;
+  }
+  94.0001%,
+  97% {
+    left: 100%;
+  }
+  97%,
+  100% {
+    left: 0;
+  }
+}
+@keyframes slideTwo {
+  0%,
+  30% {
+    left: 100%;
+  }
+  33%,
+  63% {
+    left: 0;
+  }
+  66%,
+  100% {
+    left: -100%;
+  }
+}
+@keyframes slideThree {
   0%,
   63% {
     left: 100%;
