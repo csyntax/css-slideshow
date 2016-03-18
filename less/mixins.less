@@ -26,6 +26,13 @@
     animation-timing-function: @time;
 }
 
+.animation-name(@name) {
+    -webkit-animation-name: @name;
+    -moz-animation-name: @name;
+    -o-animation-name: @name;
+    animation-name: @name;
+}
+
 .transform(@transform) {
     -ms-transform: @transform;
     -webkit-transform: @transform;

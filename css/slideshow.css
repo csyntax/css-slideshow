@@ -79,6 +79,7 @@ ul:last-of-type li {
 ul:last-of-type li:nth-of-type(1) {
   -webkit-animation-name: fallThree;
   -moz-animation-name: fallThree;
+  -o-animation-name: fallThree;
   animation-name: fallThree;
   top: 2%;
   -ms-transform: rotate(-1deg);
@@ -90,6 +91,7 @@ ul:last-of-type li:nth-of-type(1) {
 ul:last-of-type li:nth-of-type(2) {
   -webkit-animation-name: fallTwo;
   -moz-animation-name: fallTwo;
+  -o-animation-name: fallTwo;
   animation-name: fallTwo;
   top: 2%;
   -ms-transform: rotate(-1.5deg);
@@ -101,30 +103,43 @@ ul:last-of-type li:nth-of-type(2) {
 ul:last-of-type li:nth-of-type(3) {
   -webkit-animation-name: fallOne;
   -moz-animation-name: fallOne;
+  -o-animation-name: fallOne;
   animation-name: fallOne;
   top: 1%;
 }
-/* - Falling animations -*/
-/* - Fade In/Out -*/
 ul:first-of-type li {
   -webkit-animation-duration: 12s;
-  -webkit-animation-iteration-count: infinite;
   -moz-animation-duration: 12s;
+  -o-animation-duration: 12s;
+  animation-duration: 12s;
+  -webkit-animation-iteration-count: infinite;
   -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease;
+  -moz-animation-timing-function: ease;
+  -o-animation-timing-function: ease;
+  animation-timing-function: ease;
   opacity: 0;
 }
 ul:first-of-type li:first-child {
   -webkit-animation-name: fadeOne;
   -moz-animation-name: fadeOne;
+  -o-animation-name: fadeOne;
+  animation-name: fadeOne;
   opacity: 1;
 }
 ul:first-of-type li:nth-of-type(2) {
   -webkit-animation-name: fadeTwo;
   -moz-animation-name: fadeTwo;
+  -o-animation-name: fadeTwo;
+  animation-name: fadeTwo;
 }
 ul:first-of-type li:nth-of-type(3) {
   -webkit-animation-name: fadeThree;
   -moz-animation-name: fadeThree;
+  -o-animation-name: fadeThree;
+  animation-name: fadeThree;
 }
 /* - Slide In/Out -*/
 ul:nth-of-type(2) {
@@ -132,32 +147,43 @@ ul:nth-of-type(2) {
 }
 ul:nth-of-type(2) img {
   -webkit-animation-duration: 14s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease;
   -moz-animation-duration: 14s;
+  -o-animation-duration: 14s;
+  animation-duration: 14s;
+  -webkit-animation-iteration-count: infinite;
   -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease;
   -moz-animation-timing-function: ease;
+  -o-animation-timing-function: ease;
+  animation-timing-function: ease;
   position: relative;
 }
 ul:nth-of-type(2) li:nth-of-type(1) img {
   -webkit-animation-name: slideOne;
   -moz-animation-name: slideOne;
+  -o-animation-name: slideOne;
+  animation-name: slideOne;
   left: 0;
 }
 ul:nth-of-type(2) li:nth-of-type(2) img {
   -webkit-animation-name: slideTwo;
   -moz-animation-name: slideTwo;
+  -o-animation-name: slideTwo;
+  animation-name: slideTwo;
   left: 100%;
 }
 ul:nth-of-type(2) li:nth-of-type(3) img {
   -webkit-animation-name: slideThree;
   -moz-animation-name: slideThree;
+  -o-animation-name: slideThree;
+  animation-name: slideThree;
   left: 100%;
 }
 body {
-  background-color: #1f1f1f;
+  background: #1f1f1f url("../images/b.jpg") no-repeat;
   color: #e2e2e2;
-  font-family: 'ff-dagny-web-pro-1', 'ff-dagny-web-pro-2', 'helvetica neue', helvetica, sans-serif;
   font-size: 100%;
   margin: 0;
   padding: 0;
@@ -173,12 +199,6 @@ header {
   display: block;
   margin: 0 auto;
   width: 85%;
-}
-header p {
-  color: #cecece;
-  font-size: 0.9em;
-  margin: 0;
-  padding: 0.5em 0 1em 0;
 }
 h1 {
   font-size: 1.6em;
