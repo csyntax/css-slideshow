@@ -3,6 +3,9 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         less: {
             development: {
+                options: {
+                    compress: true
+                },
                 files: {
                     "css/slideshow.css": "less/slideshow.less"
                 }
